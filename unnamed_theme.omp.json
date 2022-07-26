@@ -1,0 +1,96 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#15C2CB",
+          "properties": {
+            "style": "folder"
+          },
+          "style": "plain",
+          "template": "{{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "foreground": "#F141A8",
+          "properties": {
+            "branch_icon": "\ue0a0 "
+          },
+          "style": "plain",
+          "template": "<#F3EFF5>on</> {{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
+          "type": "git"
+        },
+        {
+          "foreground": "#5EADF2",
+          "style": "plain",
+          "template": "{{if .Version}}<#F3EFF5>is</> \uf487 {{.Version}} {{end}}",
+          "type": "project"
+        },
+        {
+          "foreground": "#44FFD2",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "<#F3EFF5>via</> \ue718 {{ .Full }} ",
+          "type": "node"
+        },
+        {
+          "foreground": "#FE4A49",
+          "style": "plain",
+          "template": "<#F3EFF5>and</> \ue71e {{.Full}} ",
+          "type": "npm"
+        },
+        {
+          "foreground": "#3773A5",
+          "powerline_symbol": "\ue0b0",
+          "style": "plain",
+          "template": "<#F3EFF5>via</>\u2800\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}\u2800",
+          "type": "python"
+        },
+        {
+          "foreground": "#66D0DD",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "<#F3EFF5>via</> \ue626 {{ .Full }}",
+          "type": "go"
+        },
+        {
+          "foreground": "#F74C00",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "<#F3EFF5>via</> \ue7a8 {{ .Full }}",
+          "type": "rust"
+        }
+        
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#BF616A",
+          "style": "plain",
+          "template": "\u2717",
+          "type": "exit"
+        },
+        {
+          "foreground": "#FFE45E",
+          "style": "plain",
+          "template": " $ ",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
