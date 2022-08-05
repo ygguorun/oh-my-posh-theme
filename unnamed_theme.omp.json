@@ -67,6 +67,12 @@
           "style": "plain",
           "template": "<#F3EFF5>via</> \ue7a8 {{ .Full }}",
           "type": "rust"
+        },
+        {
+          "foreground": "#BF616A",
+          "style": "plain",
+          "template": "\u2717",
+          "type": "exit"
         }
         
       ],
@@ -77,15 +83,9 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#BF616A",
-          "style": "plain",
-          "template": "\u2717",
-          "type": "exit"
-        },
-        {
           "foreground": "#FFE45E",
           "style": "plain",
-          "template": " $ ",
+          "template": "$ ",
           "type": "text"
         }
       ],
